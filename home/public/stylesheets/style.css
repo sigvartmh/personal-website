@@ -1,20 +1,20 @@
 body {
-  /*font-size: 1.4rem;*/
+  font-size: 1.4rem;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   margin-top: 100px;
-  /*font-weight: 400;
-  line-height: 24px;*/
   color: #666c77;
+    /*font-weight: 400;
+  line-height: 24px;*/
 }
 
 a {
-  color: #00B7FF;
+  color: #259dff;
   text-decoration: none;
 
 }
 
 a:hover {
-  color: #000;
+  color: #00B7FF;
 }
 h1 {
     font-size: 40px;
@@ -63,7 +63,6 @@ h3 {
     border-bottom: 1px solid #bdc3c7;
     background-color: rgba(255,255,255,0.95);
     z-index: 9000;
-    margin: 0;
 }
 .header-logo {
     position: absolute;
@@ -126,8 +125,9 @@ h3 {
     color: inherit;
 }
 .header-links a:hover {
-    text-decoration: underline;
+    color: #259dff;
 }
+
 /* Content styling*/
 .section {
     padding: 50px;
@@ -137,7 +137,8 @@ h3 {
 }
 .section-hero {
     background-color: #3d566f;
-    background-image: url(/images/flowerbg.jpg);
+    background-image: url(/images/sfbg.jpg);
+    background-size: 100% auto;
     color: #fff;
     margin-top: 100px;
 }
@@ -145,6 +146,26 @@ h3 {
 .section-hero h1 {
     margin-bottom: 50px;
 }
+.section-about {
+    background-color: #ecf0f1;
+    font-size: 1.1rem;
+    color: #333;
+}
+.section-blog {
+    background-color: #ecf0f1;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 100px;
+
+}
+.section-cv {
+    background-color: #ecf0f1;
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 100px;
+
+}
+
 
 .section-philosophy {
     background-color: #ecf0f1;
@@ -162,3 +183,49 @@ h3 {
 .section-footer a {
     color: #fff;
 }
+.section-footer a:hover {
+    color: #00B7FF;
+}
+
+
+/* colon styling */
+.cols-3 > div,
+.cols-4 > div {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 400px;
+    font-size: 1.1rem;
+}
+@media only screen and (min-width: 1000px) {
+    .cols-3,
+    .cols-4 {
+        margin: 0 -15px;
+        padding: 0;
+        text-align: center;
+    }
+    .cols-3::after,
+    .cols-4::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    .cols-3 > div,
+    .cols-4 > div {
+        max-width: none;
+        display: block;
+        position: relative;
+        min-height: 1px;
+        padding: 25px 15px;
+        float: left;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+    .cols-3 > div {
+        width: 33.3333333%;
+    }
+    .cols-4 > div {
+        width: 25%;
+    }

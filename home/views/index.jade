@@ -1,20 +1,60 @@
 extends layout
 block content
-    a(href="xref",name="home")
     section(class="section section-hero")
         div(class="container")
             h1= title
             h2= description
-    section(class="section section-summary")
+    section(class="section section-about")
         div(class="container")
-            h3 About Me
+            h2 About Me
             p I'm a student at the Cybernetics and robotics MSc course at 
-                a(href="http://www.ntnu.edu/studies/mttk") NTNU
-                \ which i enjoy quite alot. I also work at the 
-                a(href="https://innsida.ntnu.no/wiki/-/wiki/English/Orakel+Support+Services") Orakel Helpdesk
-                \ where I help students with various computer related things. Everything from installing simple software like Matlab to more complex hardware/software debugging, and of cours removing x numbers of viruses, spamwares and malwares.
-            h3 this is awesome
-    section(class="section section-footer")
+                a(href="http://www.ntnu.edu/studies/mttk") NTNU 
+                | which i enjoy quite alot. I also work at the 
+                a(href="https://innsida.ntnu.no/wiki/-/wiki/English/Orakel+Support+Services") Orakel Helpdesk 
+                | where I help students with various computer related things. Everything from installing simple software like Matlab to more complex hardware/software debugging, and of cours removing X numbers of viruses, spamwares and malwares. I love helping people with problems and debuging problems in both hardware and software.
+
+            p I also love traveling and seeing the world. When I was younger I went to a 1 school year[10 Months] exchange to Hong Kong with 
+                a(href="http://www.afs.no/", target="_blank") AFS   
+                | . I went to a high school called Yan Oi Tong Tin Ka Ping Secondary School. I got a lot of friends there and occassionaly travle back there as often as I can. I also travle a lot to Korea with my girlfriend which I've been together with for over 4 years now.
+
+            p My hobbies include hacking on things, breaking things and fixing them again. I also love snowboarding. On my spare time I like hacking on embedded hardware like AVRs, ARMs or whatever microcontroller/microprocessor I can get my hands on. My recent facination have been 
+                a(href="http://en.wikipedia.org/wiki/WebSocket" target="_blank") websockets 
+                | where you can push data from the server side to the client side without updating the browser by polling for data. Hopefully I can get an example up and running on this page.
+            
+    section(class="section section-benefits")
         div(class="container")
-            p Created by #{title} - Powered by Node.js, Fontawesome
+        h3 Projects I'm working on:
+            div(class="cols-3")
+                div 
+                    h3 Card API for student unions
+                    p Trying to create a RESTful API for student unions company contacts to use for company presentation registration. Basicly it will take a post parameter which is the MiFare ID of the student card and look it up in an LDAP or AD database. Then it'll return the username which can then be checked up against the registration for a specific company presentation.
+                    p [Project currently on hold]
+                    p Waiting for the indexing of the MiFare ID in AD...
+                        | Currently it takes 30 sec to do 1 search
+                div 
+                    h3 Mifare decoder
+                    p This project is finished. Takes the NFC uid of the card which at NTNU is called the MifareID and returns it after converting it to an int using the same conversion as ntnu. Which is basicly switching the bits from big-endian to little endian for each 8-pair.
+                    a(href="https://github.com/sigvartmh/mifare_decoder", target="_blank") Find the code here
+                div 
+                    h3 Orakel app
+                    p Trying to make life a bit easier for the people working at Orakel Helpdesk by creating an utility application. Where you can registrate cases, log paperstacks and printer status and read MiFare ID from Cards and check them with AD
+            div(class="cols-3")
+                div
+                    h3 Internal pages Orakel Help desk
+                    p I'm also dedicating a lot of time in maintaining and improving the internal pages of Orakeltjenesten(Orakel Help desk). They are written in 
+                        a(href="https://www.djangoproject.com/" target="_blank") Django 
+                        | which is a high-level python web framework. We are also using a some jQuery/AJAX magic. My current feat was porting the whole page that consist of about 18 Django apps. From and old version of Django 1.4.15 to Django 1.7
+                div
+                    h3 Hardware/software developer consultant
+                    p I'm doing some hardware/software consulting work for a startup called 
+                        a(href="http://www.cosytech.net", target="_blank") CosyTech 
+                        | which includes working with bluetooth, WiFi and NFC. Mostly doing work with Embedded C/C++ with a dash of python magic
+                div
+                    h3 TTK4155
+                    p This is a course at NTNU which in norwegian is called "Byggern" but the full name of the course in english is "Industrial and Embedded Computer Systems Design". I really enjoyed doing this project which accounted of 40% of our grade. Our solution/project got 95/100 and you can find the source code for our project on 
+                        a(href="https://github.com/sigvartmh/TTK4155---Embedded-system-construction" target="_blank") Github 
+                    | Side note: Not all the code have been written by me as we were a group of 2.
+
+    include ./foot.jade
+
 
