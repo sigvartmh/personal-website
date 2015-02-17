@@ -1,0 +1,20 @@
+extends layout
+block content
+    a(href="xref",name="home")
+    section(class="section section-hero")
+        div(class="container")
+            h1= title
+            h2= description
+    section(class="section section-summary")
+        div(class="container")
+            h3 About Me
+            p I'm a student at the Cybernetics and robotics MSc course at 
+                a(href="http://www.ntnu.edu/studies/mttk") NTNU
+                \ which i enjoy quite alot. I also work at the 
+                a(href="https://innsida.ntnu.no/wiki/-/wiki/English/Orakel+Support+Services") Orakel Helpdesk
+                \ where I help students with various computer related things. Everything from installing simple software like Matlab to more complex hardware/software debugging, and of cours removing x numbers of viruses, spamwares and malwares.
+            h3 this is awesome
+    section(class="section section-footer")
+        div(class="container")
+            p Created by #{title} - Powered by Node.js, Fontawesome
+
