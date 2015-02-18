@@ -17,19 +17,19 @@ a:hover {
   color: #00B7FF;
 }
 h1 {
-    font-size: 40px;
+    font-size: 0.8rem;
     font-weight: 300;
 }
 
 @media only screen and (min-width: 1000px) {
     h1 {
-        font-size: 70px;
+        font-size: 0.8rem;
         font-weight: 200;
     }
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.6rem;
     font-weight: 300;
 }
 h3 {
@@ -73,7 +73,7 @@ h3 {
     height: 60px;
     line-height: 55px;
     margin: auto;
-    font-size: 50px;
+    font-size: 3.0rem;
     font-weight: 200;
     color: #95a5a6;
 }
@@ -92,19 +92,19 @@ h3 {
 }
 .header-links > li {
     font-weight: 300;
-    font-size: 14px;
     line-height: 38px;
+    font-size: 1.3rem;
     padding: 0 8px;
     display: inline-block;
     margin: 0;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1010px) {
     .header-logo {
         height: 99px;
         line-height: 90px;
         margin: 0 0 0 30px;
-        font-size: 70px;
+        font-size: 3.0rem;
         right: auto;
     }
     .header-links {
@@ -114,9 +114,28 @@ h3 {
     }
     .header-links > li {
         font-weight: 300;
-        font-size: 18px;
+        font-size: 1.2rem;
         line-height: 95px;
         padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .header-logo {
+        height: 99px;
+        line-height: 90px;
+        margin: 0 0 0 0px;
+        font-size: 9vmin;
+    }
+    .header-links {
+        top: 1.8rem;
+        padding-right: 15px;
+    }
+    .header-links > li {
+        font-weight: 300;
+        font-size: 3vmin;
+        line-height: 95px;
+        padding: 0 10px;
     }
 }
 
@@ -138,7 +157,7 @@ h3 {
 .section-hero {
     background-color: #3d566f;
     background-image: url(/images/sfbg.jpg);
-    background-size: 100% auto;
+    background-size: 100.0rem auto;
     color: #fff;
     margin-top: 100px;
 }
