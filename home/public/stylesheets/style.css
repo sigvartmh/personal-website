@@ -73,7 +73,7 @@ h3 {
     height: 60px;
     line-height: 55px;
     margin: auto;
-    font-size: 3.0rem;
+    font-size: 6vmin;
     font-weight: 200;
     color: #95a5a6;
 }
@@ -93,7 +93,7 @@ h3 {
 .header-links > li {
     font-weight: 300;
     line-height: 38px;
-    font-size: 1.3rem;
+    font-size: 2vmin;
     padding: 0 8px;
     display: inline-block;
     margin: 0;
@@ -117,25 +117,6 @@ h3 {
         font-size: 1.2rem;
         line-height: 95px;
         padding: 0 15px;
-    }
-}
-
-@media only screen and (max-width: 470px) {
-    .header-logo {
-        height: 99px;
-        line-height: 90px;
-        margin: 0 0 0 0px;
-        font-size: 9vmin;
-    }
-    .header-links {
-        top: 1.8rem;
-        padding-right: 15px;
-    }
-    .header-links > li {
-        font-weight: 300;
-        font-size: 3vmin;
-        line-height: 95px;
-        padding: 0 10px;
     }
 }
 
